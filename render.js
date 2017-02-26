@@ -21,9 +21,9 @@ function mouse_position(e)
 	ctx.fillStyle = 'white';
 	ctx.fillRect(50, canvas.height - 100, 300, 80);
 	ctx.fillStyle = 'black';
-	ctx.fillText(e.screenX, 50, canvas.height - 80);
-	ctx.fillText(e.screenY - 90, 100, canvas.height - 80);
-	var v = (e.screenY - 90) * biggest;
+	ctx.fillText(e.clientX, 50, canvas.height - 80);
+	ctx.fillText(e.clientY, 100, canvas.height - 80);
+	var v = e.clientY * biggest;
 	v /= canvas.height;
 	ctx.fillText(v, 150, canvas.height - 80);
 }
